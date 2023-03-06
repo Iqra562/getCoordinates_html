@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +23,16 @@
 }
 </style>
 <body>
-    <label for="">GEOLOCATION</label>
-    <button onclick="fun()" >search</button>
+  <label >Choose Area:</label>
+  <select d="sel">
+    <option i value="Lucky One Mall ">Lucky One Mall </option>
+    <option value="Aptech">Aptech</option>
+  </select>
     <div id="main"></div>
     <script>
         let a = document.getElementById("main");
+        let select =  document.getElementById("sel");
+     if(select.value == 'Lucky One Mall'){
       function fun(){
         if(navigator.geolocation){
             alert("supporting");
@@ -49,6 +55,8 @@
             drag:true
         })
       }
+      fun();
+     }
     </script>
 </body>
 </html>
